@@ -37,7 +37,7 @@ import{ DatePicker } from "@quentinm22/datepicker-react-cmp"
 | ------------- | ------------- |
 | maxDate  | string or nothing  |
 | idInput  | string or nothing  |
-
+| className  | string or nothing  |
 ## Authors
 
 - [@quentinM22](https://github.com/quentinM22)

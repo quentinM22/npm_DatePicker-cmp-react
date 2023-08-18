@@ -3,10 +3,11 @@ import React, { ChangeEvent, useState } from "react";
 export interface DatePickerProp {
     maxDate: string;
     idInput: string;
+    className?: string;
 }
 
 const DatePicker = (
-    {maxDate, idInput} : DatePickerProp,
+    {maxDate, idInput, className} : DatePickerProp,
     ) => {
     const [newValue, setNewValue] = useState('')
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +20,8 @@ const DatePicker = (
          max={maxDate} 
          onChange={handleChange}
          value={newValue} 
-         id={idInput}/>
+         id={idInput}
+         className={className}/>
     </> 
     )
 }
