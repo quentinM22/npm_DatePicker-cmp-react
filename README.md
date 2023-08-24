@@ -27,9 +27,24 @@ Install Package in React project
 ## Usage/Examples
 
 ```javascript
-import{ DatePicker } from "@quentinm22/datepicker-react-cmp"
+import React, { useState } from "react"
+import DatePicker from "@quentinm22/datepicker-react-cmp"
 
-<DatePicker idInput="id-input" maxDate={(date format) "jj-mm-yyyy"}/>
+function App() {
+  const [startDate, setStartDate] = useState("")
+
+  return (
+    <DatePicker
+      idInput="start-date"
+      className="error-input"
+      setState={setStartDate}
+      state={startDate}
+    />
+  )
+}
+
+export default App;
+
 ```
 
 
@@ -38,6 +53,8 @@ import{ DatePicker } from "@quentinm22/datepicker-react-cmp"
 | maxDate  | string or nothing  |
 | idInput  | string or nothing  |
 | className  | string or nothing  |
+| setState | (value: string) => void |
+| state | string |
 ## Authors
 
 - [@quentinM22](https://github.com/quentinM22)
